@@ -1,0 +1,550 @@
+@import url('https://fonts.googleapis.com/css2?family=Crimson+Text:ital@0;1&family=Kanit:wght@700&display=swap');
+
+/* default size of 1em is 16px */
+/* Design constants */
+html {
+
+    /* Harmonic scale */
+    --ratio: 1.4142356;
+    --s-5: calc(var(--s-4) / var(--ratio));
+    --s-4: calc(var(--s-3) / var(--ratio)); /* Larger title font size */
+    --s-3: calc(var(--s-2) / var(--ratio)); /* Smaller title font size */
+    --s-2: calc(var(--s-1) / var(--ratio));
+    --s-1: calc(var(--s0) / var(--ratio));
+    --s0: 1rem; /* table font size */
+    --s1: calc(var(--s0) * var(--ratio));
+    --s2: calc(var(--s1) * var(--ratio));
+    --s3: calc(var(--s2) * var(--ratio));
+    --s4: calc(var(--s3) * var(--ratio));
+    --s5: calc(var(--s4) * var(--ratio));
+
+    /* white spaces */
+    --page-margin: var(--s4);
+    --vertical-space: var(--s2);
+    --menu-space: var(--s0);
+
+    /* colors */
+    --frame-color: #ccc;
+
+    margin: 0 10vw;
+
+    /* height: 100%; */
+    background-color: #ccc;
+    
+    /* background-color: #ccc; */
+
+/* CSS warnings such as the one below can be ignored but the rest should be fixed
+Due to their dynamic nature, CSS variables are currently not statically checked */
+    
+}
+
+body    {
+    margin: 0; /* Remove default margin */
+     /* Remove default padding */
+    background-color: #ffffff; /* White background for the center */
+    max-width: 100%;
+    /* max-width: 1080px; */
+    height: 100%;
+    max-width: 90ch;
+    margin: 0 auto 0 auto;
+    position: relative;
+}
+
+.wrapper    {
+    align-content: center;
+    background-color: #ccc;
+    padding: 0 10vw;
+}
+
+.content    {
+    background-color:white;
+    height: 100%;
+}
+  
+
+:root   {
+    font-family: "Crimson Text", "Roboto", "sans-serif"; 
+    
+}
+
+* {
+    box-sizing: border-box;
+  }
+  
+
+a   {
+    text-decoration: none;
+}
+
+/* Style the navigation menu */
+header  {
+    background-image: url(https://raw.githubusercontent.com/cgshep/csc8018-coursework-resources/refs/heads/master/assets/chessboxing_background.jpg);
+    display: flex;
+    background-size: cover;
+    /* resize: both; */
+    overflow:hidden;
+    width: 100%;
+    max-width: 100%;
+    margin: 0 0 4% 0;
+}
+
+header img  {
+    max-width: 100%;
+}
+
+header ul   {
+    list-style-type: none;
+}
+/* CSS combinators */
+header  ul li   {
+    display: inline-flex;
+    overflow-wrap: anywhere;
+    margin: 0;
+    position: sticky;
+    font-size: 1rem;
+    top: 8%;
+    transform: translate(20%,40%);
+    
+}
+
+header ul li a  {
+    width: 5.5rem;
+    text-align: left;
+}
+
+header ul li:hover  {
+    background-color: #999292;
+}
+
+header ul li:active {
+    color: yellow;
+   
+}
+
+
+/* Style the active link (or home/logo) */
+.active {
+    background-color: #21946a;
+    color: white;
+}
+
+#body {
+    display:list-item;
+    width:100vw;
+    height:100vh;
+    /* max-width: 120ch; */
+    position: relative;
+    text-align:center;
+    margin-top:0px;
+    margin-left:50px;
+    margin-right:50px;
+
+}
+
+li  {
+    margin-right: 4vw;
+}
+
+img {
+    float: right;
+    max-width: 100%;
+    height: auto;
+}
+
+/* CSS Styling for h2 section headers  */
+h2 {
+    font-family: kanit, serif;
+    font-size: 1.5em;
+    margin: 0 4rem 0 4rem;
+    /* margin-left: 2rem; */
+    
+}
+/* Styling for image container */
+.position-element   {
+    display: inline-block;
+    padding: 1.5em;
+    text-align: center;
+    width: 50%;
+    aspect-ratio: 4/3;
+    border: 0.5dvh solid #ccc;
+    border-radius: 20px;
+    margin: 2vw;
+}
+
+.position-element img   {
+    display: block;
+    width: 100%;
+    height: 100%;
+
+}
+.position-element iframe    {
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+.position-element figcaption  {
+    margin-top: 10px;
+    font-style: italic;
+
+}
+
+.table-map .position-element    {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    align-items: center;
+    width: 100vw;
+}
+/*CSS styling on p elements for margins  */
+p {
+   font-family: "Crimson Text", serif;
+   margin: 0 5vw ;
+   /* margin-left: 5%; */
+}
+
+/* CSS styling for map and table timeline */
+figure.table-map   {
+    width: 90%;
+    margin: 2vw 4vw;
+    position: center;
+}
+
+.table-map table    {
+    width: 40%;
+    float: left;
+    height: fit-content;
+}
+
+.table-map img  {
+    width: 60%;
+    aspect-ratio: 400/257; 
+    /* using orignal image dimensions aspect ratio */
+}
+
+
+
+iframe  {
+    width: 100%;
+    height: auto;
+    border: 0;
+}
+
+table   {
+    border-collapse: collapse;
+    font-style: normal;
+    font-family: "Crimson Text", "Roboto", "sans-serif"; 
+    font-size: 1rem;
+}
+
+th  {
+    border-top: solid 2px #ccc;
+    border-bottom: solid 2px #ccc;
+}
+
+td  {
+    border-bottom: solid 1px #ccc;
+}
+
+#content {
+    transform: translateY(-50%);
+    /* -webkit-transform:translateY(-50%); */
+    top:50%;
+    right: -40%;
+    transform: scale(2);
+    transform-origin: 0%;
+}
+
+/* Adjust page margin for small dislays */
+@media only screen and (max-width: 600px) {
+    :root {
+        --page-margin: var(--s-2);
+        font-family: "Crimson Text", "Roboto", "sans-serif"; 
+
+    }
+
+    html    {
+        margin: 0;
+    }
+
+    header {
+        flex-direction: row;
+        flex-wrap: wrap;
+        margin-left: 0;
+        margin-right: 0;
+        display: block;
+        text-align:start;
+
+        aspect-ratio: 4/3;
+    }
+    /* Because we are in mobile mode, we want to display it as a
+       vertical list */
+    header ul {
+        /* display: block; */
+        /* -webkit-flex-direction: column; */
+        flex-direction: column;
+        float: none;
+        max-width: fit-content;
+        
+    }
+    /* We have two lists: the first one are the always visibile items
+       in the menu bar. The second one is the one that will be hidden */
+    header ul:last-child {
+        width: 100%;
+        flex-basis: 100%;
+    }
+    header ul li {      
+        position: static;
+    }
+
+
+    
+  
+
+    .table-map .position-element    {
+        display: block;
+        float: none;
+    }
+    .table-map table,img    {
+        width: 100%;
+        float: none;
+    }
+    
+    
+}
+
+
+
+/*** Page layout **********************************************************************************/
+
+
+.img   {
+    overflow-anchor:auto;
+    width: 100%;
+}
+
+
+.headingfont {
+    font-family: kanit;
+    opacity: 0.9;
+    padding-left: 10%;
+    text-align:right;    
+    /* display: -webkit-flex; */
+    display: flex;
+    color: #ffffff;
+}
+
+.headingfont li a:hover {
+    color: yellow;
+}
+
+
+h1  {
+    font-size: 8vw;
+    position: sticky;
+}
+
+
+ul  {
+    margin-left: 3rem;
+}
+
+
+.ico{
+    width:100px;
+    display:block;
+    height:40px;
+    background:rgb(255, 255, 255);
+    color:rgb(0, 0, 0);
+    text-decoration:none;
+    padding-left:20px;
+}
+.ico:before{
+    content: "\2656";
+    /* background:url('https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcSj3XfIpf-OOJRCcWz4iN2CU3qMKVVbj0p0bRvKNGVo1U9pk_8ZIlyR8pWreA'); */
+    background-size:cover;
+    position:absolute;
+    width:40px;
+    height:40px;
+    margin-left:-25px;
+}
+
+.whiteQueen:before {
+    content: "\2655";
+    background-size:cover;
+    position:relative;
+    width:40px;
+    height:40px;
+    font: 2em lighter;
+    margin-right:1vw;
+}
+
+.blackKing:before {
+    content: "\265a";
+    /* background:url('https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcSj3XfIpf-OOJRCcWz4iN2CU3qMKVVbj0p0bRvKNGVo1U9pk_8ZIlyR8pWreA'); */
+    background-size:cover;
+    position:relative;
+    width:40px;
+    height:40px;
+    font: 2em lighter;
+    margin-right:1vw;
+} 
+.whiteRook:before {
+    /* &#x2656; HTML Code*/
+    content: "\2656";
+    background-size:cover;
+    position:relative;
+    width:40px;
+    height:40px;
+    font: 2em lighter;
+    margin-right:1vw;
+} 
+.blackBishop:before {
+    /* &#x265d; HTML Code*/
+    content: "\265d";
+    background-size:cover;
+    position:relative;
+    width:40px;
+    height:40px;
+    font: 2em lighter;
+    margin-right:1vw;
+
+} 
+
+
+.clearfix::after {
+    content: "";
+    clear: both;
+    display:inline-block;
+  }
+
+a   {
+    color: white;
+}
+
+
+.bgroundimg {
+    background-image: url(https://raw.githubusercontent.com/cgshep/csc8018-coursework-resources/refs/heads/master/assets/chessboxing_background.jpg);
+    width: 100%;
+    height: 100%;
+    position: relative;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    color: white;
+    float: left;
+}
+
+/* CSS styling for figures */
+figure {
+    max-width: 100%;
+    text-align: start;
+    font-size: smaller;
+    border: 0.5dvh solid #ccc;
+    background: #ffffff;
+
+    border-radius: 20px;
+    margin-right: auto;
+    margin-left: auto;
+    padding: 2vw;
+    max-height: 100%;
+    float: right;
+   
+  }
+
+
+.bgroundfill {
+    background-color: black;
+    background-size: 100vw 100vh;
+    color: white;
+    text-align: center;
+    padding: 1.5rem;
+
+}
+
+.rounded-borders {
+        width: 100%;
+        height: 100%;
+        min-width: 200px;
+        border: 2px solid #ccc;
+        background: #ffffff;
+        margin-left: 10%;
+        margin-right: 10%;
+        padding: 20px 10px;
+        border-radius: 20px;
+        float:right;
+        aspect-ratio: 2;
+    
+  }
+
+/* Styling for first figure caption */
+.clearfix em {
+    font-style: italic;
+    font-family: "Crimson Text", "Roboto", "sans-serif"; 
+    font-size: var(--s0);
+    
+}
+
+/* Styling for subsequent figure caption */
+figcaption.italic-text {
+    font-style: italic;
+    font-family: "Crimson Text", "Roboto", "sans-serif"; 
+    font-size: 1.5vw;
+    text-align: center;
+    margin: 0 0vw;
+  }
+
+  /* Styling for bottom paragraph just above footer */
+blockquote.italic-text {
+    margin-left: 5rem;
+    font-style: italic;
+    font-family: "Crimson Text", "Roboto", "sans-serif"; 
+  }
+
+/* styling for <em> element at bottom*/
+blockquote em  {
+    font-style: normal;
+    font-family: "Crimson Text", "Roboto", "sans-serif"; 
+}
+
+footer  {
+    font-style: normal;
+    font-family: "Crimson Text", "Roboto", "sans-serif"; 
+}
+
+  /* Adjust page margin for small dislays */
+@media only screen and (min-width: 200px) {
+    #content {
+        background-color: pink;
+    }
+
+    img {
+        width: 15rem;
+    }
+
+    /* table   {
+
+
+    } */
+}
+
+
+
+    /* Because we are in mobile mode, we want to display it as a
+       vertical list */
+    header ul {
+        display: block;
+    }
+    /* We have two lists: the first one are the always visibile items
+       in the menu bar. The second one is the one that will be hidden */
+    header ul:last-child {
+        width: 100%;
+        flex-basis: 100%;
+    }
+    header ul li {
+        margin-bottom: 0;
+        width: 100%;
+        text-align: right;
+        padding: 0.5em;
+    }
+  
